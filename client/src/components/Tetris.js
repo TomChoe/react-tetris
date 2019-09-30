@@ -50,6 +50,7 @@ const Tetris = () => {
   }
 
   console.log('re-render');
+  
   return (
     <StyledTetrisWrapper role='button' tabIndex='0' onKeyDown={e => move(e)}>
       <StyledTetris>
@@ -64,7 +65,7 @@ const Tetris = () => {
               <Display text="Level" />
             </div>
           )}
-          <StartButton onClick={startGame} />
+          <StartButton callback={startGame} />
         </aside>
       </StyledTetris>
     </StyledTetrisWrapper>
